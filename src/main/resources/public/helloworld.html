@@ -5,39 +5,56 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./stylesheets/style.css">
-  <title>Document</title>
+  <title>Coursys - Formula Tester</title>
 </head>
 <body>
-<header>DENNIS
-  <nav class="special">
-    <ul>
-      <li>OMAR</li>
-      <li>DON</li>
-      <li>SIMON</li>
-    </ul>
-  </nav>
-</header>
+<header>
+  <p id="title1">Grade Calculator</p>
 <main>
-  <p>Paragraph 1</p>
-  <p>Paragraph 2</p>
+  <p id="title2">Activities</p>
+  <p>Give grades to the numeric activities:</p>
   <table>
     <tr>
-      <th>Name</th> <th>Age</th> <th>Email</th>
+      <th>Name</th>
+      <th id ="columnSize"> Short Name </th>
+      <th id="weight">Weight</th>
+      <th id="grade">Grade</th>
+      <th> Percent</th>
     </tr>
     <tr>
-      <td>Bobby</td> <td>40</td> <td>bobbyc@sfu.ca</td><td>Extra</td>
+      <td class="columnPadding">Activity 1</td>
+      <td>A1</td>
+      <td><label><input type="number"></label></td>
+      <td><label><input type="number"></label> / <label><input type="number"></label></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="columnPadding">Activity 2</td>
+      <td>A2</td>
+      <td><label><input type="number"></label></td>
+      <td><label><input type="number"></label> / <label><input type="number"></label></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="columnPadding">Activity 3</td>
+      <td>A3</td>
+      <td><label><input type="number"></label></td>
+      <td><label><input type="number"></label> / <label><input type="number"></label></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="columnPadding">Activity 4</td>
+      <td>A4</td>
+      <td><label><input type="number"></label></td>
+      <td><label><input type="number"></label> / <label><input type="number"></label></td>
+      <td></td>
     </tr>
   </table>
-  <form action="/process_form" method="post">
-    <input type="text" placeholder="Enter name">
-    <input type="date">
-    <input type="password">
-    <input type="submit" value="SUBMIT">
-  </form>
+  <p id = "result">Result</p>
+  <p><input class="button" type="button" value="Weighted"> <input class="button" type="button" value="Mean"> </p>
 </main>
+</header>
 <footer>
-  Copyright info
 </footer>
 </body>
 </html>
-l>

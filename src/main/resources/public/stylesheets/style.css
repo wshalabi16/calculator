@@ -1,8 +1,67 @@
 body {
-    background-color: rosybrown;
+    background-color: rgb(168, 40, 44);
+}
+header {
+    background-color: white;
+    padding: 40px 150px 25px 25px;
+    border-top: 50px solid #3d3935 ;
+    border-bottom: 40px solid #3d3935 ;
+    margin-top: -25px;
+}
+#title1 {
+    color: black;
+    font-weight: bolder;
+    font-size: x-large;
+}
+#title2{
+    color: rgb(168, 40, 44);
+    font-weight: bold;
+    font-size: large;
+}
+main {
+    background-color: aliceblue;
 }
 
-.special{
-    color: burlywood;
-    font-size: 1.5em;
+table{
+    border-collapse: collapse;
+}
+
+table th{
+    text-align: left;
+    background-color: #d0cccc;
+    padding: 4px 30px 4px 8px;
+}
+
+table td{
+    border: 1px solid gray;
+    padding: 4px 8px;
+}
+
+.columnPadding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+}
+#columnSize {
+    width: 100px;
+}
+#grade {
+    width: 90px;
+}
+#weight {
+    width: 90px;
+}
+input[type=number] {
+    width: 65%;
+}
+
+#result {
+    color: #A6192E;
+    font-weight: bold;
+    padding-top: 10px;
+
+}
+.button {
+    color: white;
+    background-color:#A6192E;
 }
