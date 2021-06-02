@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./stylesheets/style.css">
   <title>Coursys - Formula Tester</title>
+  <script src="./calculator.js" defer></script>
 </head>
 <body>
-<header>
+<div>
   <p id="title1">Grade Calculator</p>
 <main>
   <p id="title2">Activities</p>
@@ -16,44 +17,45 @@
   <table>
     <tr>
       <th>Name</th>
-      <th id ="columnSize"> Short Name </th>
-      <th id="weight">Weight</th>
-      <th id="grade">Grade</th>
-      <th> Percent</th>
+      <th class="columnSize"> Short Name </th>
+      <th class="columnSize">Weight</th>
+      <th class="columnSize">Grade</th>
+      <th class="columnSize"> Percent</th>
     </tr>
     <tr>
       <td class="columnPadding">Activity 1</td>
       <td>A1</td>
-      <td><label><input type="number"></label></td>
-      <td><label><input type="number"></label> / <label><input type="number"></label></td>
-      <td></td>
+      <td><label><input id="weightA1" type="number" oninput=displayPercentA1()></label></td>
+      <td><label><input id="topA1" type="number" oninput=displayPercentA1()></label> / <label><input id="bottomA1" type="number" oninput=displayPercentA1()></label></td>
+      <td id="percentA1"></td>
     </tr>
     <tr>
       <td class="columnPadding">Activity 2</td>
       <td>A2</td>
-      <td><label><input type="number"></label></td>
-      <td><label><input type="number"></label> / <label><input type="number"></label></td>
-      <td></td>
+      <td><label><input id="weightA2" type="number" oninput=displayPercentA2()></label></td>
+      <td><label><input id="topA2" type="number" oninput=displayPercentA2()></label> / <label><input id="bottomA2" type="number" oninput=displayPercentA2()></label>></td>
+      <td id="percentA2"></td>
     </tr>
     <tr>
       <td class="columnPadding">Activity 3</td>
       <td>A3</td>
-      <td><label><input type="number"></label></td>
-      <td><label><input type="number"></label> / <label><input type="number"></label></td>
-      <td></td>
+      <td><label><input id="weightA3" type="number" oninput=displayPercentA3()></label></td>
+      <td><label><input id="topA3" type="number" oninput=displayPercentA3()></label> / <label><input id="bottomA3" type="number" oninput=displayPercentA3()></label></td>
+      <td id="percentA3"></td>
     </tr>
     <tr>
       <td class="columnPadding">Activity 4</td>
       <td>A4</td>
-      <td><label><input type="number"></label></td>
-      <td><label><input type="number"></label> / <label><input type="number"></label></td>
-      <td></td>
+      <td><label><input id="weightA4" type="number" oninput=displayPercentA4()></label></td>
+      <td><label><input id="topA4" type="number" oninput=displayPercentA4()></label> / <label><input id="bottomA4" type="number" oninput=displayPercentA4()></label></td>
+      <td id="percentA4"></td>
     </tr>
   </table>
   <p id = "result">Result</p>
-  <p><input class="button" type="button" value="Weighted"> <input class="button" type="button" value="Mean"> </p>
+  <p id="resultPercentage"></p>
+  <p><input id="Weighted" type="button" value="Weighted"> <input id="Mean" type="button" value="Mean"> </p>
 </main>
-</header>
+</div>
 <footer>
 </footer>
 </body>

@@ -1,13 +1,15 @@
 body {
     background-color: rgb(168, 40, 44);
+    padding: 5px 75px 50px 75px;
 }
-header {
+div {
     background-color: white;
-    padding: 40px 150px 25px 25px;
+    padding: 40px 350px 25px 25px;
     border-top: 50px solid #3d3935 ;
     border-bottom: 40px solid #3d3935 ;
     margin-top: -25px;
 }
+
 #title1 {
     color: black;
     font-weight: bolder;
@@ -20,6 +22,7 @@ header {
 }
 main {
     background-color: aliceblue;
+    padding-bottom: 25px;
 }
 
 table{
@@ -42,26 +45,29 @@ table td{
     padding-bottom: 30px;
     padding-right: 20px;
 }
-#columnSize {
+.columnSize {
     width: 100px;
 }
-#grade {
-    width: 90px;
-}
-#weight {
-    width: 90px;
-}
+
 input[type=number] {
     width: 65%;
 }
 
 #result {
-    color: #A6192E;
+    color: rgb(168, 40, 44);
     font-weight: bold;
     padding-top: 10px;
 
 }
-.button {
+#Weighted {
     color: white;
-    background-color:#A6192E;
+    background-color:rgb(168, 40, 44);
+    float: right;
+}
+
+#Mean {
+    color: white;
+    background-color:rgb(168, 40, 44);
+    float: right;
+    margin: 1px;
 }
