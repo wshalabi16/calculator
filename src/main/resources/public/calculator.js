@@ -42,8 +42,8 @@ function displayPercentA4(){
     }
 }
 
-var a = document.getElementById("Weighted")
-a.addEventListener('click', Weighted)
+var w = document.getElementById("Weighted")
+w.addEventListener('click', Weighted)
 
 function Weighted(){
     var weight_A1 = document.getElementById("weightA1").value;
@@ -99,5 +99,37 @@ function Weighted(){
     var weightPart1 = ((gradeA1 * weight_A1)+(gradeA2 * weight_A2)+(gradeA3 * weight_A3)+(gradeA4 * weight_A4));
     var weightPArt2 = weight_A1 + weight_A2 + weight_A3 + weight_A4;
     var finalWeight = weightPart1/weightPArt2;
-    resultPercentage.textContent = roundTwoDecimal((finalWeight * 100)) + "%";
+    resultPercentage.textContent = "Weighted result is " + roundTwoDecimal((finalWeight * 100)) + "%";
+}
+
+var m = document.getElementById("Mean")
+m.addEventListener('click', Mean)
+
+function Mean(){
+    var totalGrades = 4;
+    var gradeA1 = document.getElementById('topA1').value / document.getElementById('bottomA1').value;
+    var gradeA2 = document.getElementById('topA2').value / document.getElementById('bottomA2').value;
+    var gradeA3 = document.getElementById('topA3').value / document.getElementById('bottomA3').value;
+    var gradeA4 = document.getElementById('topA4').value / document.getElementById('bottomA4').value;
+
+    if (isNaN(gradeA1)){
+        gradeA1 = 0;
+        totalGrades = totalGrades - 1;
+    }
+    if (isNaN(gradeA2)){
+        gradeA2 = 0;
+        totalGrades = totalGrades - 1;
+    }
+    if (isNaN(gradeA3)){
+        gradeA3 = 0;
+        totalGrades = totalGrades - 1;
+    }
+    if (isNaN(gradeA4)){
+        gradeA4 = 0;
+        totalGrades = totalGrades - 1;
+    }
+
+    var finalMean = (gradeA1 + gradeA2 + gradeA3 + gradeA4) / totalGrades;
+    resultPercentage.textContent = "Mean result is " + roundTwoDecimal((finalMean * 100)) + "%";
+
 }
