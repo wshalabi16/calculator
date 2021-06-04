@@ -1,3 +1,10 @@
+var s = document.getElementById("but");
+s.addEventListener('click',alertMe);
+
+function alertMe(){
+    window.alert("WILL YOU PASS? WILL YOU FAIL? FIND OUT YOUR FATE USING THE GRADE CALCULATOR!");
+}
+
 function roundTwoDecimal(num) {
     return +(Math.round(num + "e+2")  + "e-2");
 }
@@ -42,8 +49,8 @@ function displayPercentA4(){
     }
 }
 
-var w = document.getElementById("Weighted")
-w.addEventListener('click', Weighted)
+var w = document.getElementById("Weighted");
+w.addEventListener('click', Weighted);
 
 function Weighted(){
     var weight_A1 = document.getElementById("weightA1").value;
@@ -102,8 +109,8 @@ function Weighted(){
     resultPercentage.textContent = "Weighted result is " + roundTwoDecimal((finalWeight * 100)) + "%";
 }
 
-var m = document.getElementById("Mean")
-m.addEventListener('click', Mean)
+var m = document.getElementById("Mean");
+m.addEventListener('click', Mean);
 
 function Mean(){
     var totalGrades = 4;
