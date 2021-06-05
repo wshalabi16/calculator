@@ -19,28 +19,28 @@ div {
 
 @-webkit-keyframes colorchange {
     0% {
-        color: blue;
+        color: red;
     }
     10% {
-        color: #8e44ad;
+        color: orangered;
     }
     20% {
-        color: #1abc9c;
+        color: yellow;
     }
     30% {
-        color: #d35400;
+        color: green;
     }
     40% {
         color: blue;
     }
     50% {
-        color: #34495e;
+        color: purple;
     }
     60% {
-        color: blue;
+        color: black;
     }
     70% {
-        color: #2980b9;
+        color: rgb(168, 40, 44);
     }
     80% {
         color: #f1c40f;
