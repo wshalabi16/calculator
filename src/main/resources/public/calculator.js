@@ -15,7 +15,7 @@ function displayPercentA1(){
     var finalA1 = top_A1/bottom_A1;
     percentA1.textContent = roundTwoDecimal(finalA1 * 100) + "%";
     if (!isFinite(finalA1)){
-        percentA1.textContent = "Enter Your Scores";
+        percentA1.textContent = "Enter Your Valid Scores";
     }
 }
 
@@ -25,7 +25,7 @@ function displayPercentA2(){
     var finalA2 = top_A2/bottom_A2;
     percentA2.textContent = roundTwoDecimal(finalA2 * 100) + "%";
     if (!isFinite(finalA2)){
-        percentA2.textContent = "Enter Your Scores";
+        percentA2.textContent = "Enter Your Valid Scores";
     }
 }
 
@@ -35,7 +35,7 @@ function displayPercentA3(){
     var finalA3 = top_A3/bottom_A3;
     percentA3.textContent = roundTwoDecimal(finalA3 * 100) + "%";
     if (!isFinite(finalA3)){
-        percentA3.textContent = "Enter Your Scores";
+        percentA3.textContent = "Enter Your Valid Scores";
     }
 }
 
@@ -45,7 +45,7 @@ function displayPercentA4(){
     var finalA4 = top_A4/bottom_A4;
     percentA4.textContent = roundTwoDecimal(finalA4 * 100) + "%";
     if (!isFinite(finalA4)){
-        percentA4.textContent = "Enter Your Scores";
+        percentA4.textContent = "Enter Your Valid Scores";
     }
 }
 
@@ -103,6 +103,27 @@ function Weighted(){
         gradeA4 = 0;
     }
 
+    if (document.getElementById("weightA1").value.length === 0 && document.getElementById("weightA2").value.length === 0 && document.getElementById("weightA3").value.length === 0 && document.getElementById("weightA4").value.length === 0) {
+        alert("A weight is required for the calculator to be activated.")
+    }
+
+    if((document.getElementById("topA1").value.length !== 0 &&
+        document.getElementById("bottomA1").value.length === 0) || (document.getElementById("topA1").value.length === 0 && document.getElementById("bottomA1").value.length !== 0) ){
+        alert("Two values are required in Activity 1.")
+    }
+    if((document.getElementById("topA2").value.length !== 0 &&
+        document.getElementById("bottomA2").value.length === 0) || (document.getElementById("topA2").value.length === 0 && document.getElementById("bottomA2").value.length !== 0) ){
+        alert("Two values are required in Activity 2.")
+    }
+    if((document.getElementById("topA3").value.length !== 0 &&
+        document.getElementById("bottomA3").value.length === 0) || (document.getElementById("topA3").value.length === 0 && document.getElementById("bottomA3").value.length !== 0) ){
+        alert("Two values are required in Activity 3.")
+    }
+    if((document.getElementById("topA4").value.length !== 0 &&
+        document.getElementById("bottomA4").value.length === 0) || (document.getElementById("topA4").value.length === 0 && document.getElementById("bottomA4").value.length !== 0) ){
+        alert("Two values are required in Activity 4.")
+    }
+
     var weightPart1 = ((gradeA1 * weight_A1)+(gradeA2 * weight_A2)+(gradeA3 * weight_A3)+(gradeA4 * weight_A4));
     var weightPArt2 = weight_A1 + weight_A2 + weight_A3 + weight_A4;
     var finalWeight = weightPart1/weightPArt2;
@@ -134,6 +155,35 @@ function Mean(){
     if (isNaN(gradeA4)){
         gradeA4 = 0;
         totalGrades = totalGrades - 1;
+    }
+
+    if (document.getElementById("topA1").value.length === 0 &&
+        document.getElementById("bottomA1").value.length === 0 &&
+        document.getElementById("topA2").value.length === 0 &&
+        document.getElementById("bottomA2").value.length === 0 &&
+        document.getElementById("topA3").value.length === 0 &&
+        document.getElementById("bottomA3").value.length === 0 &&
+        document.getElementById("topA4").value.length === 0 &&
+        document.getElementById("bottomA4").value.length === 0) {
+
+        alert("Two values are required in a grade box for the calculator to be activated.")
+    }
+
+    if((document.getElementById("topA1").value.length !== 0 &&
+        document.getElementById("bottomA1").value.length === 0) || (document.getElementById("topA1").value.length === 0 && document.getElementById("bottomA1").value.length !== 0) ){
+        alert("Two values are required in Activity 1.")
+    }
+    if((document.getElementById("topA2").value.length !== 0 &&
+        document.getElementById("bottomA2").value.length === 0) || (document.getElementById("topA2").value.length === 0 && document.getElementById("bottomA2").value.length !== 0) ){
+        alert("Two values are required in Activity 2.")
+    }
+    if((document.getElementById("topA3").value.length !== 0 &&
+        document.getElementById("bottomA3").value.length === 0) || (document.getElementById("topA3").value.length === 0 && document.getElementById("bottomA3").value.length !== 0) ){
+        alert("Two values are required in Activity 3.")
+    }
+    if((document.getElementById("topA4").value.length !== 0 &&
+        document.getElementById("bottomA4").value.length === 0) || (document.getElementById("topA4").value.length === 0 && document.getElementById("bottomA4").value.length !== 0) ){
+        alert("Two values are required in Activity 4.")
     }
 
     var finalMean = (gradeA1 + gradeA2 + gradeA3 + gradeA4) / totalGrades;
