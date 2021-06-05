@@ -127,7 +127,12 @@ function Weighted(){
     var weightPart1 = ((gradeA1 * weight_A1)+(gradeA2 * weight_A2)+(gradeA3 * weight_A3)+(gradeA4 * weight_A4));
     var weightPArt2 = weight_A1 + weight_A2 + weight_A3 + weight_A4;
     var finalWeight = weightPart1/weightPArt2;
-    resultPercentage.textContent = "Weighted result is " + roundTwoDecimal((finalWeight * 100)) + "%";
+
+    if (document.getElementById("weightA1").value.length !== 0 || document.getElementById("weightA2").value.length !== 0 || document.getElementById("weightA3").value.length !== 0 || document.getElementById("weightA4").value.length !== 0){
+        resultPercentage.textContent = "Weighted result is " + roundTwoDecimal((finalWeight * 100)) + "%";
+    }
+
+
 }
 
 var m = document.getElementById("Mean");
@@ -156,6 +161,8 @@ function Mean(){
         gradeA4 = 0;
         totalGrades = totalGrades - 1;
     }
+
+    var finalMean = (gradeA1 + gradeA2 + gradeA3 + gradeA4) / totalGrades;
 
     if (document.getElementById("topA1").value.length === 0 &&
         document.getElementById("bottomA1").value.length === 0 &&
@@ -186,7 +193,18 @@ function Mean(){
         alert("Two values are required in Activity 4.")
     }
 
-    var finalMean = (gradeA1 + gradeA2 + gradeA3 + gradeA4) / totalGrades;
-    resultPercentage.textContent = "Mean result is " + roundTwoDecimal((finalMean * 100)) + "%";
+    if(document.getElementById("topA1").value.length !== 0 &&
+        document.getElementById("bottomA1").value.length !== 0 ||
+        document.getElementById("topA2").value.length !== 0 &&
+        document.getElementById("bottomA2").value.length !== 0 ||
+        document.getElementById("topA3").value.length !== 0 &&
+        document.getElementById("bottomA3").value.length !== 0 ||
+        document.getElementById("topA4").value.length !== 0 &&
+        document.getElementById("bottomA4").value.length !== 0 ){
+        resultPercentage.textContent = "Mean result is " + roundTwoDecimal((finalMean * 100)) + "%";
+    }
+
+
+
 
 }
